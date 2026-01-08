@@ -155,6 +155,8 @@
       background-color: red;
       padding: 10px 20px;
       border-radius: 6px;
+      outline: none;
+      border: none;
     }
 
     .mail {
@@ -568,16 +570,16 @@
       <h6>Ready to watch? Enter your email to create or restart your membership.</h6>
     </div>
 
-    <div class="signup-section d-flex justify-content-center align-items-center gap-3">
+    <form class="signup-section d-flex justify-content-center align-items-center gap-3" action="plan.html">
       <div class="email-fill-up">
-        <input type="email" class="email p-2" placeholder="Email address">
+        <input type="email" class="email p-2" placeholder="Email address" required>
       </div>
 
-      <div class="get-started-btn d-flex gap-3 align-items-center">
-        <P class="mb-0">Get Started</P>
+      <button class="get-started-btn d-flex gap-3 align-items-center" action="plan.html">
+        <P class="mb-0 text-white">Get Started</P>
         <img src="arrow.svg" width="23px" alt="">
-      </div>
-    </div>
+      </button>
+    </form>
 
   </section>
 
