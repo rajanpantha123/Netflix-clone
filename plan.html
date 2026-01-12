@@ -7,6 +7,7 @@
     <title>Plan</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="./node_modules/admin-lte/dist/index.html" crossorigin="anonymous" />
     <style>
         @font-face {
             font-family: "Netflix Sans";
@@ -53,10 +54,10 @@
             margin-bottom: 50px;
         }
 
-        .cards-container{
+        .cards-container {
             display: flex;
             flex-direction: row;
-            gap:30px;
+            gap: 30px;
         }
 
         .cards {
@@ -71,11 +72,37 @@
             flex-direction: column !important;
         }
 
-        .card-headerr {
+        .shadoww {
+            box-shadow: 0px 5px 20px 1px rgba(0, 0, 0, 0.334);
+        }
+
+        .card-headerr-mobile {
             width: 100%;
-            background: linear-gradient(to top left, #226fdf, #1d529c);
+            background: radial-gradient(140.76% 131.96% at 100% 100%, rgb(33, 114, 227) 0%, rgba(74, 42, 150, 0.5) 73.57%, rgba(74, 42, 150, 0) 100%), rgb(29, 82, 157);
             border-radius: 10px;
             padding: 10px 20px 15px;
+        }
+
+        .card-headerr-basic {
+            width: 100%;
+            background: radial-gradient(140.76% 131.96% at 100% 100%, rgb(109, 59, 227) 0%, rgba(74, 42, 150, 0.5) 73.57%, rgba(74, 42, 150, 0) 100%), rgb(29, 82, 157);
+            border-radius: 10px;
+            padding: 10px 20px 15px;
+        }
+
+        .card-headerr-standard {
+            width: 100%;
+            background: radial-gradient(140.76% 131.96% at 100% 100%, rgb(176, 56, 220) 0%, rgba(74, 42, 150, 0.5) 73.57%, rgba(74, 42, 150, 0) 100%), rgb(29, 82, 157);
+            border-radius: 10px;
+            padding: 10px 20px 15px;
+        }
+
+        .card-headerr-premium {
+            width: 100%;
+            background: radial-gradient(140.76% 131.96% at 100% 100%, rgb(229, 9, 20) 0%, rgba(74, 42, 150, 0.5) 73.57%, rgba(74, 42, 150, 0) 100%), rgb(29, 82, 157);
+            border-radius: 10px;
+            padding: 10px 20px 15px;
+            /* margin:0 12px; */
         }
 
         .price {
@@ -104,15 +131,130 @@
             margin: 10px 0px;
             gap: 5px;
         }
-        hr{
-            margin:0;
+
+        hr {
+            margin: 0;
             /* margin-bottom: 10px; */
         }
 
-        .card-bodyy{
+        .card-bodyy {
+            padding: 0px 24px;
+        }
+
+        .cards-premium {
+            width: 100%;
+            height: fit-content;
+            border: 1px solid rgba(128, 128, 128, 0.4);
+            color: black;
+            /* box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px; */
+            padding: 12px 0px 35px;
+            border-radius: 0px 0px 12px 12px;
+            display: flex;
+            flex-direction: column !important;
+            /* overflow-y: hidden; */
+            position: relative;
+            /* box-sizing:unset; */
+        }
+
+        .vdcs {
+            height: 30px;
+        }
+
+        .hsdbjch {
+            bottom: 100%;
+        }
+
+        .most-popular {
+    background: red;
+            width: 100%;
+            height: fit-content;
+            padding: 5px 10px;
+            border-top: 1px solid rgba(128, 128, 128, 0.4);
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+            transform: translateY(-100%);
+            display: flex;
+            flex: 1 1 0;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .header-container {
             padding: 0px 12px;
         }
 
+        .popular-text {
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .lower-text-section {
+            font-size: 13px;
+            display: block;
+            color: rgba(0, 0, 0, 0.6);
+            font-weight: 400;
+            margin-top: 6px;
+        }
+
+        .next {
+            outline: none;
+            border: none;
+            background: red;
+            color: white;
+            border-radius: 6px;
+            padding: 7px 50px;
+            width: 30%;
+            margin: 0 auto;
+            display: block;
+            font-size: 25px;
+            font-weight: 500;
+        }
+
+        .next:hover {
+            background: rgb(184, 0, 0);
+        }
+
+        .footer-contents {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-flow: row;
+            gap: 10px !important;
+            margin: 0;
+            width: 100%;
+            padding: 0;
+        }
+
+        .footer-section {
+            display: flex;
+            flex-direction: column;
+            padding: 30px 120px;
+        }
+
+        .footer-section a {
+            list-style: none;
+            font-weight: 400;
+            color: rgba(0, 0, 0, 0.7) !important;
+        }
+
+
+        li {
+            list-style: none;
+            font-weight: 400;
+            color: rgba(0, 0, 0, 0.7) !important;
+        }
+
+        li a {
+            list-style: none;
+            font-size: 14px;
+            font-weight: 400;
+            color: rgba(0, 0, 0, 0.7) !important;
+        }
+
+        .tick {
+            right: 5%;
+            bottom: 15%;
+            display: none;
+        }
     </style>
 </head>
 
@@ -132,162 +274,263 @@
         </div>
 
         <div class="cards-container">
-            <div class="cards">
-                <div class="card-headerr mb-3">
+            <div class="cards" onclick="abc(1)" id="abc1">
+                <div class="card-headerr-mobile mb-3 position-relative">
                     <p class="fw-bold mb-0 text-white">Mobile</p>
                     <p class="fw-bold mb-0 text-white">480p</p>
+                    <img src="./tick.svg" width="15px" class="position-absolute tick">
                 </div>
-      
+
                 <div class="card-bodyy">
-                <div class="information">
-                <p class="mb-0 price">Monthly price</p>
-                <p class="amount">USD 2.99</p>
-            </div>
-            <hr>
+                    <div class="information">
+                        <p class="mb-0 price">Monthly price</p>
+                        <p class="amount">USD 2.99</p>
+                    </div>
+                    <hr>
 
-            <div class="information">
-                <p class="mb-0 price">Video and sound quality</p>
-                <p class="quality">Fair</p>
-            </div>
-                <hr>
+                    <div class="information">
+                        <p class="mb-0 price">Video and sound quality</p>
+                        <p class="quality">Fair</p>
+                    </div>
+                    <hr>
 
-            <div class="information">
-                <p class="mb-0 price">Supported</p>
-                <p class="quality">Mobile Phone, tablet</p>
-            </div>
-            <hr>
+                    <div class="information">
+                        <p class="mb-0 price">Resolution</p>
+                        <p class="quality">480p</p>
+                    </div>
+                    <hr>
 
-            <div class="information">
-                <p class="mb-0 price">Devices that your household can watch at the same time</p>
-                <p class="quality">1</p>
-            </div>
-            <hr>
-            <div class="information">
-                <p class="mb-0 price">Download devices</p>
-                <p class="amount">1</p>
-            </div>
-            <hr>
-            </div>
-        </div>
+                    <div class="information">
+                        <p class="mb-0 price">Supported</p>
+                        <p class="quality">Mobile Phone, tablet</p>
+                    </div>
+                    <hr>
 
-        <div class="cards">
-                <div class="card-headerr mb-3">
-                    <p class="fw-bold mb-0 text-white">Mobile</p>
-                    <p class="fw-bold mb-0 text-white">480p</p>
+                    <div class="information">
+                        <p class="mb-0 price">Devices that your household can watch at the same time</p>
+                        <p class="quality">1</p>
+                    </div>
+                    <hr>
+                    <div class="information">
+                        <p class="mb-0 price">Download devices</p>
+                        <p class="amount">1</p>
+                    </div>
                 </div>
-      
-                <div class="card-bodyy">
-                <div class="information">
-                <p class="mb-0 price">Monthly price</p>
-                <p class="amount">USD 2.99</p>
             </div>
-            <hr>
 
-            <div class="information">
-                <p class="mb-0 price">Video and sound quality</p>
-                <p class="quality">Fair</p>
-            </div>
-                <hr>
-
-            <div class="information">
-                <p class="mb-0 price">Supported</p>
-                <p class="quality">Mobile Phone, tablet</p>
-            </div>
-            <hr>
-
-            <div class="information">
-                <p class="mb-0 price">Devices that your household can watch at the same time</p>
-                <p class="quality">1</p>
-            </div>
-            <hr>
-            <div class="information">
-                <p class="mb-0 price">Download devices</p>
-                <p class="amount">1</p>
-            </div>
-            <hr>
-            </div>
-        </div>
-
-        <div class="cards">
-                <div class="card-headerr mb-3">
-                    <p class="fw-bold mb-0 text-white">Mobile</p>
-                    <p class="fw-bold mb-0 text-white">480p</p>
+            <div class="cards" onclick="abc(2)" id="abc2">
+                <div class="card-headerr-basic mb-3 position-relative">
+                    <p class="fw-bold mb-0 text-white">Basic</p>
+                    <p class="fw-bold mb-0 text-white">720p</p>
+                    <img src="./tick.svg" width="15px" class="position-absolute tick">
                 </div>
-      
+
                 <div class="card-bodyy">
-                <div class="information">
-                <p class="mb-0 price">Monthly price</p>
-                <p class="amount">USD 2.99</p>
-            </div>
-            <hr>
+                    <div class="information">
+                        <p class="mb-0 price">Monthly price</p>
+                        <p class="amount">USD 3.99</p>
+                    </div>
+                    <hr>
 
-            <div class="information">
-                <p class="mb-0 price">Video and sound quality</p>
-                <p class="quality">Fair</p>
-            </div>
-                <hr>
+                    <div class="information">
+                        <p class="mb-0 price">Video and sound quality</p>
+                        <p class="quality">Good</p>
+                    </div>
+                    <hr>
 
-            <div class="information">
-                <p class="mb-0 price">Supported</p>
-                <p class="quality">Mobile Phone, tablet</p>
-            </div>
-            <hr>
+                    <div class="information">
+                        <p class="mb-0 price">Resolution</p>
+                        <p class="quality">720p (HD)</p>
+                    </div>
+                    <hr>
 
-            <div class="information">
-                <p class="mb-0 price">Devices that your household can watch at the same time</p>
-                <p class="quality">1</p>
-            </div>
-            <hr>
-            <div class="information">
-                <p class="mb-0 price">Download devices</p>
-                <p class="amount">1</p>
-            </div>
-            <hr>
-            </div>
-        </div>
+                    <div class="information">
+                        <p class="mb-0 price">Supported</p>
+                        <p class="quality">TV, computer, mobile phone, tablet</p>
+                    </div>
+                    <hr>
 
-        <div class="cards">
-                <div class="card-headerr mb-3">
-                    <p class="fw-bold mb-0 text-white">Mobile</p>
-                    <p class="fw-bold mb-0 text-white">480p</p>
+                    <div class="information">
+                        <p class="mb-0 price">Devices that your household can watch at the same time</p>
+                        <p class="quality">1</p>
+                    </div>
+                    <hr>
+                    <div class="information">
+                        <p class="mb-0 price">Download devices</p>
+                        <p class="amount">1</p>
+                    </div>
                 </div>
-      
+            </div>
+
+            <div class="cards " onclick="abc(3)" id="abc3">
+                <div class="card-headerr-standard mb-3 position-relative">
+                    <p class="fw-bold mb-0 text-white">Standard</p>
+                    <p class="fw-bold mb-0 text-white">1080p</p>
+                    <img src="./tick.svg" width="15px" class="position-absolute tick">
+                </div>
+
                 <div class="card-bodyy">
-                <div class="information">
-                <p class="mb-0 price">Monthly price</p>
-                <p class="amount">USD 2.99</p>
-            </div>
-            <hr>
+                    <div class="information">
+                        <p class="mb-0 price">Monthly price</p>
+                        <p class="amount">USD 7.99</p>
+                    </div>
+                    <hr>
 
-            <div class="information">
-                <p class="mb-0 price">Video and sound quality</p>
-                <p class="quality">Fair</p>
-            </div>
-                <hr>
+                    <div class="information">
+                        <p class="mb-0 price">Video and sound quality</p>
+                        <p class="quality">Great</p>
+                    </div>
+                    <hr>
 
-            <div class="information">
-                <p class="mb-0 price">Supported</p>
-                <p class="quality">Mobile Phone, tablet</p>
-            </div>
-            <hr>
+                    <div class="information">
+                        <p class="mb-0 price">Resolution</p>
+                        <p class="quality">1080p (Full HD)</p>
+                    </div>
+                    <hr>
 
-            <div class="information">
-                <p class="mb-0 price">Devices that your household can watch at the same time</p>
-                <p class="quality">1</p>
+                    <div class="information">
+                        <p class="mb-0 price">Supported</p>
+                        <p class="quality">TV, computer, mobile phone, tablet</p>
+                    </div>
+                    <hr>
+
+                    <div class="information">
+                        <p class="mb-0 price">Devices that your household can watch at the same time</p>
+                        <p class="quality">2</p>
+                    </div>
+                    <hr>
+                    <div class="information">
+                        <p class="mb-0 price">Download devices</p>
+                        <p class="amount">2</p>
+                    </div>
+                </div>
             </div>
-            <hr>
-            <div class="information">
-                <p class="mb-0 price">Download devices</p>
-                <p class="amount">1</p>
-            </div>
-            <hr>
+
+            <div class="position-relative w-25">
+                <div id="sibb" class="most-popular position-absolute w-100 text-center">
+                    <p class="mb-0 text-white popular-text">Most Popular</p>
+                </div>
+                <div class="cards-premium shadoww" onclick="abc(4)" id="abc4">
+
+                    <div class="header-container ">
+                        <div class="card-headerr-premium mb-3 position-relative">
+                            <p class="fw-bold mb-0 text-white">Premium</p>
+                            <p class="fw-bold mb-0 text-white">4K + HDR</p>
+                            <img src="./tick.svg" width="15px" class="position-absolute tick d-block">
+                        </div>
+                    </div>
+
+                    <div class="card-bodyy">
+                        <div class="information">
+                            <p class="mb-0 price">Monthly price</p>
+                            <p class="amount">USD 9.99</p>
+                        </div>
+                        <hr>
+
+                        <div class="information">
+                            <p class="mb-0 price">Video and sound quality</p>
+                            <p class="quality">Best</p>
+                        </div>
+                        <hr>
+
+                        <div class="information">
+                            <p class="mb-0 price">Resolution</p>
+                            <p class="quality">4K (Ultra HD) + HDR</p>
+                        </div>
+                        <hr>
+
+                        <div class="information">
+                            <p class="mb-0 price">Spatial audio (immersive sound)</p>
+                            <p class="quality">Included</p>
+                        </div>
+                        <hr>
+
+                        <div class="information">
+                            <p class="mb-0 price">Supported</p>
+                            <p class="quality">TV, computer, mobile phone, tablet</p>
+                        </div>
+                        <hr>
+
+                        <div class="information">
+                            <p class="mb-0 price">Devices that your household can watch at the same time</p>
+                            <p class="quality">4</p>
+                        </div>
+                        <hr>
+                        <div class="information">
+                            <p class="mb-0 price">Download devices</p>
+                            <p class="amount">6</p>
+                        </div>
+
+                    </div>
+                </div>
             </div>
         </div>
+
+        <div class="mb-3">
+            <span class="lower-text-section">
+                HD (720p), Full HD (1080p), Ultra HD (4K) and HDR availability subject to your internet service and
+                device
+                capabilities. Not all content is available in all resolutions. See our <a href="index.html">Terms of Use
+                </a>for more details.
+            </span>
+
+            <span class="lower-text-section">
+                Only people who live with you may use your account. Watch on 4 different devices at the same time with
+                Premium, 2 with Standard, and 1 with Basic and Mobile.
+            </span>
+
+            <span class="lower-text-section">
+                Live events are included with any Netflix plan and contain ads.
         </div>
+        </span>
+
+        <button class="next" value="Submit">Next</button>
+        <!-- <button onclick="abc(2)" 
+         class="next" id="abc2" value="Submit">Next</button>
+           <button onclick="abc(3)" 
+         class="next" id="abc3" value="Submit">Next</button> -->
+
     </section>
+
+    <footer class="footer-section">
+        <div class="mb-3">
+            <a href="">Questions?Contact us</a>
+        </div>
+
+        <ul class="footer-contents mb-5">
+            <li class="list-items1"><a href="">FAQ</a></li>
+            <li class="list-items2"><a href="">Help Center</a></li>
+            <li class="list-items3"><a href="">Account</a></li>
+            <li class="list-items4"><a href="">Media Center</a></li>
+
+            <li class="list-items5"><a href="">Investor Relations</a></li>
+            <li class="list-items6"><a href="">Jobs</a></li>
+        </ul>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script>
+        var num = 4;
+        function abc(a) {
+           const abcd1 = document.getElementById(`abc${num}`);
+            const abcd2 = document.getElementById(`abc${a}`);
+
+            abcd2.classList.add('shadoww')
+            abcd2.querySelector('.tick').style.display = 'block';
+            if (a === 4) {
+                abcd2.previousElementSibling.style.background = 'red';
+            }
+            abcd1.classList.remove('shadoww')
+            abcd1.querySelector('.tick').style.display = 'none'
+            if (num === 4) {
+                    abcd1.previousElementSibling.style.background = 'rgba(0, 0, 0, 0.7)';
+                }
+            num = a;
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/admin-lte@4.0.0-rc3/dist/js/adminlte.min.js"
         crossorigin="anonymous"></script>
 </body>
 
