@@ -78,6 +78,7 @@
 
         .card-headerr-mobile {
             width: 100%;
+            /* height: 150px; */
             background: radial-gradient(140.76% 131.96% at 100% 100%, rgb(33, 114, 227) 0%, rgba(74, 42, 150, 0.5) 73.57%, rgba(74, 42, 150, 0) 100%), rgb(29, 82, 157);
             border-radius: 10px;
             padding: 10px 20px 15px;
@@ -85,6 +86,7 @@
 
         .card-headerr-basic {
             width: 100%;
+            /* height: 150px; */
             background: radial-gradient(140.76% 131.96% at 100% 100%, rgb(109, 59, 227) 0%, rgba(74, 42, 150, 0.5) 73.57%, rgba(74, 42, 150, 0) 100%), rgb(29, 82, 157);
             border-radius: 10px;
             padding: 10px 20px 15px;
@@ -92,6 +94,7 @@
 
         .card-headerr-standard {
             width: 100%;
+            /* height: 150px; */
             background: radial-gradient(140.76% 131.96% at 100% 100%, rgb(176, 56, 220) 0%, rgba(74, 42, 150, 0.5) 73.57%, rgba(74, 42, 150, 0) 100%), rgb(29, 82, 157);
             border-radius: 10px;
             padding: 10px 20px 15px;
@@ -99,6 +102,7 @@
 
         .card-headerr-premium {
             width: 100%;
+            /* height: 150px; */
             background: radial-gradient(140.76% 131.96% at 100% 100%, rgb(229, 9, 20) 0%, rgba(74, 42, 150, 0.5) 73.57%, rgba(74, 42, 150, 0) 100%), rgb(29, 82, 157);
             border-radius: 10px;
             padding: 10px 20px 15px;
@@ -139,6 +143,10 @@
 
         .card-bodyy {
             padding: 0px 24px;
+        }
+
+        .premium {
+            width: 25%;
         }
 
         .cards-premium {
@@ -228,6 +236,8 @@
             display: flex;
             flex-direction: column;
             padding: 30px 120px;
+            background-color: rgb(242, 242, 242);
+            border: 1px solid rgb(229, 229, 229);
         }
 
         .footer-section a {
@@ -254,6 +264,200 @@
             right: 5%;
             bottom: 15%;
             display: none;
+        }
+
+        @media (max-width: 1050px) {
+
+            .section-2 {
+                padding: 15px 30px;
+            }
+
+            .main-logo {
+                width: 100px;
+            }
+
+            .nav-bar {
+                padding: 15px 30px;
+            }
+
+            .cards-container {
+                display: none;
+                height: fit-content;
+            }
+
+            .card-container-mbl {
+                display: flex;
+                flex-direction: row;
+                gap: 6.67%;
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .premium-mbl {
+                width: 20%;
+                display: block;
+            }
+
+            .card-headerr-mbl {
+                width: 20%;
+                height: 110px;
+                border-radius: 8px;
+                background: white;
+                padding: 5px 10px 8px;
+                display: block;
+                margin-bottom: 0 !important;
+                border: 1px solid rgba(128, 128, 128, 0.4);
+            }
+
+
+            .card-headerr-premium-mbl {
+                width: 100%;
+                height: 110px;
+                background: radial-gradient(140.76% 131.96% at 100% 100%, rgb(229, 9, 20) 0%, rgba(74, 42, 150, 0.5) 73.57%, rgba(74, 42, 150, 0) 100%), rgb(29, 82, 157);
+                /* border-radius: 10px; */
+                /* border-top: 0px; */
+                border-end-start-radius: 8px;
+                border-end-end-radius: 8px;
+                padding: 5px 10px 8px;
+                /* margin:0 12px; */
+                display: block;
+                margin-bottom: 0 !important;
+            }
+
+            .text-head {
+                font-size: 10px !important;
+                /* color: black !important; */
+            }
+
+            .most-popular {
+                border: 8px;
+            }
+
+            .popular-text {
+                font-size: 10px;
+            }
+
+            .next {
+                font-size: 10px;
+                margin: 0 auto;
+                text-align: center;
+                padding: 10px;
+            }
+
+            .footer-section {
+                padding: 15px 30px;
+            }
+
+            .footer-contents {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .card-bodyy-mbl {
+                padding: 0px;
+                margin-bottom: 20px;
+                display: block;
+            }
+
+            .information {
+                display: flex;
+                flex-direction: row !important;
+                justify-content: space-between;
+                /* text-align: end; */
+            }
+
+        }
+
+        @media (max-width: 500px) {
+            .footer-contents {
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            .nav-bar{
+                padding: 25px;
+                /* margin-bottom: 20px !important; */
+            }
+
+            .nav--bar{
+                margin-bottom: 20px; 
+            }
+
+            .section-2{
+                padding: 5px 10px;
+            }
+
+            .card-container-mbl{
+                /* padding: 5px 10px; */
+            }
+
+            .card-bodyy-mbl{
+                /* padding: 5px 10px; */
+            }
+            
+            .footer-section{
+                padding: 5px 10px;
+            }
+
+            .card-headerr-mbl{
+                padding: 2px 6px 4px;
+            }
+
+            .card-headerr-premium-mbl{
+                padding: 2px 6px 4px;
+            }
+        }
+
+        @media (min-width: 1050px) {
+            .card-headerr-mobile-mbl {
+                width: 100%;
+                /* height: 150px; */
+                background: radial-gradient(140.76% 131.96% at 100% 100%, rgb(33, 114, 227) 0%, rgba(74, 42, 150, 0.5) 73.57%, rgba(74, 42, 150, 0) 100%), rgb(29, 82, 157);
+                border-radius: 10px;
+                padding: 10px 20px 15px;
+                display: none;
+            }
+
+
+            .card-headerr-basic-mbl {
+                width: 100%;
+                /* height: 150px; */
+                background: radial-gradient(140.76% 131.96% at 100% 100%, rgb(109, 59, 227) 0%, rgba(74, 42, 150, 0.5) 73.57%, rgba(74, 42, 150, 0) 100%), rgb(29, 82, 157);
+                border-radius: 10px;
+                padding: 10px 20px 15px;
+                display: none;
+            }
+
+            .card-headerr-standard-mbl {
+                width: 100%;
+                /* height: 150px; */
+                background: radial-gradient(140.76% 131.96% at 100% 100%, rgb(176, 56, 220) 0%, rgba(74, 42, 150, 0.5) 73.57%, rgba(74, 42, 150, 0) 100%), rgb(29, 82, 157);
+                border-radius: 10px;
+                padding: 10px 20px 15px;
+                display: none;
+            }
+
+            .card-headerr-premium-mbl {
+                width: 100%;
+                /* height: 150px; */
+                background: radial-gradient(140.76% 131.96% at 100% 100%, rgb(229, 9, 20) 0%, rgba(74, 42, 150, 0.5) 73.57%, rgba(74, 42, 150, 0) 100%), rgb(29, 82, 157);
+                border-radius: 10px;
+                padding: 10px 20px 15px;
+                /* margin:0 12px; */
+                display: none;
+            }
+
+            .premium-mbl {
+                width: 20%;
+                display: none;
+            }
+
+
+            .card-bodyy-mbl {
+                display: none;
+            }
+
+            .card-container-mbl{
+                display: none;
+            }
         }
     </style>
 </head>
@@ -406,17 +610,17 @@
                 </div>
             </div>
 
-            <div class="position-relative w-25">
+            <div class="position-relative premium">
                 <div id="sibb" class="most-popular position-absolute w-100 text-center">
                     <p class="mb-0 text-white popular-text">Most Popular</p>
                 </div>
                 <div class="cards-premium shadoww" onclick="abc(4)" id="abc4">
 
-                    <div class="header-container ">
+                    <div class="header-container w-100">
                         <div class="card-headerr-premium mb-3 position-relative">
                             <p class="fw-bold mb-0 text-white">Premium</p>
                             <p class="fw-bold mb-0 text-white">4K + HDR</p>
-                            <img src="./tick.svg" width="15px" class="position-absolute tick d-block">
+                            <img src="./tick.svg" width="15px" style="display: block;" class=" position-absolute tick">
                         </div>
                     </div>
 
@@ -466,6 +670,84 @@
             </div>
         </div>
 
+        <div class="card-container-mbl">
+
+            <div class="card-headerr-mbl mb-3 position-relative" onclick="bcd(1)">
+                <p class="fw-bold mb-0 text-black text-head">Mobile</p>
+                <p class="fw-normal mb-0 text-secondary text-head">480p</p>
+                <img src="./tick.svg" width="15px" class="position-absolute tick">
+            </div>
+
+            <div class="card-headerr-mbl mb-3 position-relative" onclick="bcd(2)">
+                <p class="fw-bold mb-0 text-black text-head">Basic</p>
+                <p class="fw-normal mb-0 text-secondary text-head">720p</p>
+                <img src="./tick.svg" width="15px" class="position-absolute tick">
+            </div>
+
+            <div class="card-headerr-mbl mb-3 position-relative" onclick="bcd(3)">
+                <p class="fw-bold mb-0 text-black text-head">Standard</p>
+                <p class="fw-normal mb-0 text-secondary text-head">1080p</p>
+                <img src="./tick.svg" width="15px" class="position-absolute tick">
+            </div>
+
+            <!-- <div class="header-container "> -->
+            <div class="position-relative premium-mbl">
+                <div id="sibb" class="most-popular position-absolute w-100 text-center">
+                    <p class="mb-0 text-white popular-text">Most Popular</p>
+                </div>
+                <div class="card-headerr-premium-mbl mb-3 position-relative shadoww" onclick="bcd(4)">
+                    <p class="fw-bold mb-0 text-white text-head">Premium</p>
+                    <p class="fw-normal mb-0 text-white text-head">4K + HDR</p>
+                    <img src="./tick.svg" width="15px" class="position-absolute tick" style="display: block;">
+                    <!-- </div> -->
+                </div>
+            </div>
+
+        </div>
+
+        <div class="card-bodyy-mbl">
+            <div class="information">
+                <p class="mb-0 price">Monthly price</p>
+                <p class="amount">USD 9.99</p>
+            </div>
+            <hr>
+
+            <div class="information">
+                <p class="mb-0 price">Video and sound quality</p>
+                <p class="quality">Best</p>
+            </div>
+            <hr>
+
+            <div class="information">
+                <p class="mb-0 price">Resolution</p>
+                <p class="quality">4K (Ultra HD) + HDR</p>
+            </div>
+            <hr>
+
+            <div class="information">
+                <p class="mb-0 price w-50">Spatial audio (immersive sound)</p>
+                <p class="quality">Included</p>
+            </div>
+            <hr>
+
+            <div class="information">
+                <p class="mb-0 price">Supported</p>
+                <p class="quality w-50 text-end">TV, computer, mobile phone, tablet</p>
+            </div>
+            <hr>
+
+            <div class="information">
+                <p class="mb-0 price w-50">Devices that your household can watch at the same time</p>
+                <p class="quality">4</p>
+            </div>
+            <hr>
+            <div class="information">
+                <p class="mb-0 price">Download devices</p>
+                <p class="amount">6</p>
+            </div>
+
+        </div>
+
         <div class="mb-3">
             <span class="lower-text-section">
                 HD (720p), Full HD (1080p), Ultra HD (4K) and HDR availability subject to your internet service and
@@ -512,9 +794,9 @@
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
     <script>
-        var num = 4;
+        let num = 4;
         function abc(a) {
-           const abcd1 = document.getElementById(`abc${num}`);
+            const abcd1 = document.getElementById(`abc${num}`);
             const abcd2 = document.getElementById(`abc${a}`);
 
             abcd2.classList.add('shadoww')
@@ -525,13 +807,32 @@
             abcd1.classList.remove('shadoww')
             abcd1.querySelector('.tick').style.display = 'none'
             if (num === 4) {
-                    abcd1.previousElementSibling.style.background = 'rgba(0, 0, 0, 0.7)';
-                }
+                abcd1.previousElementSibling.style.background = 'rgba(0, 0, 0, 0.7)';
+            }
+            num = a;
+        } 
+
+        function bcd(a) {
+            const bcde1 = document.getElementById(`bcd${num}`);
+            const bcde2 = document.getElementById(`bcd${a}`);
+
+            bcde2.classList.add('shadoww')
+            bcde2.querySelector('.tick'), style.display = 'block';
+            bcde2.querySelector('.card-headerr-mbl'), style.background ='radial-gradient(140.76% 131.96% at 100% 100%, rgb(229, 9, 20) 0%, rgba(74, 42, 150, 0.5) 73.57%, rgba(74, 42, 150, 0) 100%), rgb(29, 82, 157)';
+            
+
+            if (a === 4) {
+                bcde2.previousElementSibling.style.background = 'red';
+            }
+
+            bcde1.classList.remove('shadoww')
+            bcde1.querySelector('.tick').style.display = 'none'
+            if (num === 4) {
+                bcde1.previousElementSibling.style.background = 'rgba(0, 0, 0, 0.7)';
+            }
             num = a;
         }
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/admin-lte@4.0.0-rc3/dist/js/adminlte.min.js"
-        crossorigin="anonymous"></script>
 </body>
 
 </html>
