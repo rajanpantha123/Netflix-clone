@@ -57,7 +57,7 @@
         .cards-container {
             display: flex;
             flex-direction: row;
-            gap: 20px;
+            gap: 10px;
         }
 
         .cards {
@@ -155,7 +155,7 @@
             border: 1px solid rgba(128, 128, 128, 0.4);
             color: black;
             /* box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px; */
-            padding: 12px 0px 35px;
+            padding: 12px 0px 14px;
             border-radius: 0px 0px 12px 12px;
             display: flex;
             flex-direction: column !important;
@@ -326,6 +326,7 @@
 
             .text-head {
                 font-size: 10px !important;
+                /* color: black; */
                 /* color: black !important; */
             }
 
@@ -672,20 +673,20 @@
 
         <div class="card-container-mbl">
 
-            <div class="card-headerr-mbl mb-3 position-relative" onclick="bcd(1)">
-                <p class="fw-bold mb-0 text-black text-head">Mobile</p>
+            <div class="card-headerr-mbl mb-3 position-relative" id="bcd1" onclick="bcd(1)">
+                <p class="fw-bold mb-0 text-head">Mobile</p>
                 <p class="fw-normal mb-0 text-secondary text-head">480p</p>
                 <img src="./tick.svg" width="15px" class="position-absolute tick">
             </div>
 
-            <div class="card-headerr-mbl mb-3 position-relative" onclick="bcd(2)">
-                <p class="fw-bold mb-0 text-black text-head">Basic</p>
+            <div class="card-headerr-mbl mb-3 position-relative" id="bcd2" onclick="bcd(2)">
+                <p class="fw-bold mb-0 text-head">Basic</p>
                 <p class="fw-normal mb-0 text-secondary text-head">720p</p>
                 <img src="./tick.svg" width="15px" class="position-absolute tick">
             </div>
 
-            <div class="card-headerr-mbl mb-3 position-relative" onclick="bcd(3)">
-                <p class="fw-bold mb-0 text-black text-head">Standard</p>
+            <div class="card-headerr-mbl mb-3 position-relative" id="bcd3" onclick="bcd(3)">
+                <p class="fw-bold mb-0 text-head">Standard</p>
                 <p class="fw-normal mb-0 text-secondary text-head">1080p</p>
                 <img src="./tick.svg" width="15px" class="position-absolute tick">
             </div>
@@ -695,7 +696,7 @@
                 <div id="sibb" class="most-popular position-absolute w-100 text-center">
                     <p class="mb-0 text-white popular-text">Most Popular</p>
                 </div>
-                <div class="card-headerr-premium-mbl mb-3 position-relative shadoww" onclick="bcd(4)">
+                <div class="card-headerr-premium-mbl mb-3 position-relative shadoww" id="bcd4" onclick="bcd(4)">
                     <p class="fw-bold mb-0 text-white text-head">Premium</p>
                     <p class="fw-normal mb-0 text-white text-head">4K + HDR</p>
                     <img src="./tick.svg" width="15px" class="position-absolute tick" style="display: block;">
@@ -806,25 +807,28 @@
             num = a;
         }
 
-        function bcd(a) {
+        function bcd(b) {
             const bcde1 = document.getElementById(`bcd${num}`);
-            const bcde2 = document.getElementById(`bcd${a}`);
+            const bcde2 = document.getElementById(`bcd${b}`);
 
-            bcde2.classList.add('shadoww')
-            bcde2.querySelector('.tick'), style.display = 'block';
-            bcde2.querySelector('.card-headerr-mbl'), style.background = 'radial-gradient(140.76% 131.96% at 100% 100%, rgb(229, 9, 20) 0%, rgba(74, 42, 150, 0.5) 73.57%, rgba(74, 42, 150, 0) 100%), rgb(29, 82, 157)';
+            bcde2.classList.add('shadoww');
+            bcde2.querySelector('.tick').style.display='block';
+            bcde2.style.background='radial-gradient(140.76% 131.96% at 100% 100%, rgb(229, 9, 20) 0%, rgba(74, 42, 150, 0.5) 73.57%, rgba(74, 42, 150, 0) 100%), rgb(29, 82, 157)';
+            bcde2.style.color='white'
 
-
-            if (a === 4) {
+            if (b === 4) {
                 bcde2.previousElementSibling.style.background = 'red';
             }
 
             bcde1.classList.remove('shadoww')
+            bcde1.style.background='white'
+            bcde1.style.color='black'
+
             bcde1.querySelector('.tick').style.display = 'none'
             if (num === 4) {
                 bcde1.previousElementSibling.style.background = 'rgba(0, 0, 0, 0.7)';
             }
-            num = a;
+            num = b;
         }
     </script>
 </body>
